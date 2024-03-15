@@ -2,6 +2,7 @@ vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 vim.wo.relativenumber = true
+vim.cmd [[let &stc='%=%{v:relnum?v:relnum:v:lnum} ']]
 
 require("rose-pine").setup({
     variant = "auto", -- auto, main, moon, or dawn
