@@ -6,10 +6,10 @@ while IFS= read -r repo; do
 	DIR="$HOME/.local/share/nvim/site/pack/main/opt/$HASH/"
     if [ -d $DIR ]; then
 	    cd $DIR
-	    git pull --quiet
+	    git pull --verbose
     else
         mkdir -p "$HOME/.local/share/nvim/site/pack/main/opt/"
-	    git clone "https://github.com/$repo.git" "$DIR" --quiet
+	    git clone "https://github.com/$repo.git" "$DIR" --verbose
     fi
     if ! grep -Fxq "vim.cmd [[packadd $HASH]]" "$HOME/.config/nvim/lua/main/externals.lua"; then
         printf "vim.cmd [[packadd $HASH]]\n" >> "$HOME/.config/nvim/lua/main/externals.lua"
