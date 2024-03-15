@@ -1,16 +1,15 @@
 #!/bin/sh
 
 while IFS= read -r repo; do
-    printf "$repo\n"
     HASH="$(printf $repo | sha512sum | awk '{print $1}')"
-    DIR="$HOME/.local/share/nvim/site/pack/main/opt/$HASH/"
+    printf "$repo: $HASH\n"
+	DIR="$HOME/.local/share/nvim/site/pack/main/opt/$HASH/"
     if [ -d $DIR ]; then
 	    cd $DIR
-	    git pull --verbose
+	    git pull --quiet
     else
-	    mkdir -p $DIR
-	    cd $DIR
-	    git clone "https://github.com/$repo.git" . --verbose
+        mkdir -p "$HOME/.local/share/nvim/site/pack/main/opt/"
+	    git clone "https://github.com/$repo.git" "$DIR" --quiet
     fi
     if ! grep -Fxq "vim.cmd [[packadd $HASH]]" "$HOME/.config/nvim/lua/main/externals.lua"; then
         printf "vim.cmd [[packadd $HASH]]\n" >> "$HOME/.config/nvim/lua/main/externals.lua"
