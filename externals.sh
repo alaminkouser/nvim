@@ -12,7 +12,7 @@ while IFS= read -r repo; do
 	    cd $DIR
 	    git clone "https://github.com/$repo.git" . --verbose
     fi
-    if ! grep -q -F "vim.cmd [[packadd $HASH]]" "$(dirname "$0")/lua/main/externals.lua"; then
-        printf "vim.cmd [[packadd $HASH]]\n" >> "$(dirname "$0")/lua/main/externals.lua"
+    if ! grep -Fxq "vim.cmd [[packadd $HASH]]" "$HOME/.config/nvim/lua/main/externals.lua"; then
+        printf "vim.cmd [[packadd $HASH]]\n" >> "$HOME/.config/nvim/lua/main/externals.lua"
     fi
-done < $(dirname "$0")/externals.txt
+done < "$HOME/.config/nvim/externals.txt"

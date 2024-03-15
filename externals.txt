@@ -7,3 +7,5 @@ hrsh7th/cmp-cmdline
 hrsh7th/vim-vsnip
 hrsh7th/vim-vsnip-integ
 rose-pine/neovim
+nvim-lua/plenary.nvim
+nvim-telescope/telescope.nvim
