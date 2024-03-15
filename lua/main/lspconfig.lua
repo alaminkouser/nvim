@@ -12,3 +12,8 @@ lspconfig.gopls.setup({
   },
 })
 
+lspconfig.denols.setup{}
+
+vim.g.markdown_fenced_languages = {
+  "ts=typescript"
+}
