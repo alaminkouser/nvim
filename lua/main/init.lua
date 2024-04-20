@@ -1,6 +1,7 @@
-require("main.externals")
+require("main.lazy")
+
 
 require("main.lspconfig")
-require("main.cmp")
+require("main.nvim-cmp")
+
 require("main.style")
-require("main.telescope")
