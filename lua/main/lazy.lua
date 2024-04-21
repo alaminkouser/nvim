@@ -24,5 +24,11 @@ require("lazy").setup({
 			"hrsh7th/cmp-cmdline",
 			"hrsh7th/nvim-cmp"
 		}
-	}
+	},
+	{
+		"nvim-telescope/telescope.nvim", tag = "0.1.6",
+		dependencies = {
+			"nvim-lua/plenary.nvim"
+		}
+    }
 })
