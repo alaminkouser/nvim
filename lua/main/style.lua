@@ -8,3 +8,5 @@ vim.cmd [[set colorcolumn=80]]
 vim.cmd [[set cmdheight=0]]
 vim.cmd [[set whichwrap+=<,>]]
 vim.cmd [[set nowrap]]
+vim.cmd [[set signcolumn=no]]
+

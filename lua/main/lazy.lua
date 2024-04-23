@@ -30,18 +30,12 @@ require("lazy").setup({
 		build = ":TSUpdate"
 	},
 	{
-		"Abstract-IDE/Abstract-cs"
+		"folke/tokyonight.nvim"
 	},
 	{
 		"nvim-telescope/telescope.nvim", tag = "0.1.6",
 		dependencies = {
 			"nvim-lua/plenary.nvim"
 		}
-    },
-	{
-		"nvim-lualine/lualine.nvim",
-		dependencies = { 
-			"nvim-tree/nvim-web-devicons"
-		}
-	}
+    }
 })
