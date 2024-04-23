@@ -9,4 +9,5 @@ vim.cmd [[set cmdheight=0]]
 vim.cmd [[set whichwrap+=<,>]]
 vim.cmd [[set nowrap]]
 vim.cmd [[set signcolumn=no]]
-
+vim.cmd [[aunmenu PopUp.-1-]]
+vim.cmd [[aunmenu PopUp.How-to\ disable\ mouse]]
