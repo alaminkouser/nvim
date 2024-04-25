@@ -30,6 +30,9 @@ require("lazy").setup({
 		build = ":TSUpdate"
 	},
 	{
+		"https://gitlab.com/HiPhish/rainbow-delimiters.nvim"
+	},
+	{
 		"folke/tokyonight.nvim"
 	},
 	{
