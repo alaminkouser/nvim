@@ -1,3 +1,3 @@
 local lspconfig = require("lspconfig")
 
-lspconfig.vimtex.setup{}
+lspconfig.texlab.setup{}

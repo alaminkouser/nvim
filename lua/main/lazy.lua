@@ -46,11 +46,5 @@ require("lazy").setup({
 		dependencies = {
 			"nvim-lua/plenary.nvim"
 		}
-    },
-	{
-		"lervag/vimtex",
-		lazy = true,
-		init = function()
-		end
 	}
 })
