@@ -13,9 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
-		"neovim/nvim-lspconfig"
-	},
-	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
